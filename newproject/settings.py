@@ -9,13 +9,13 @@ https://docs.djangoproject.com/en/4.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
-
+import dj_database_url
 from pathlib import Path
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
+# DATABASE_URL = "postgresql://postgres:ba3Po4ySCXpa8hqvBPOB@containers-us-west-100.railway.app:6647/railway"
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-2@y(m=wb27*c#jey6w2^5=bss2&_&j4vt)hd+dcyhterc)q@6#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
 
@@ -83,11 +83,11 @@ WSGI_APPLICATION = 'newproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'studypad_db', 
+        'NAME': 'railway', 
         'USER': 'postgres',
-        'PASSWORD': 'Payboi10',
-        'HOST': '127.0.0.1', 
-        'PORT': '5432',
+        'PASSWORD': 'ba3Po4ySCXpa8hqvBPOB',
+        'HOST': 'containers-us-west-100.railway.app', 
+        'PORT': 'railway',
     }
 }
 # Password validation
