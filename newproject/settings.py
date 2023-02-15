@@ -15,7 +15,10 @@ import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-# DATABASE_URL = "PGPASSWORD=ba3Po4ySCXpa8hqvBPOB psql -h containers-us-west-100.railway.app -U postgres -p 6647 -d railway"
+DATABASE_URL = "postgresql://postgres:98IvfkhPqmDJytZbsIA3@containers-us-west-34.railway.app:5679/railway"
+DATABASES = {
+    "default": dj_database_url.config(default=DATABASE_URL, conn_max_age=1800),
+}
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
@@ -83,10 +86,10 @@ WSGI_APPLICATION = 'newproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'railway', 
+        'NAME': 'Studypad_db', 
         'USER': 'postgres',
-        'PASSWORD': 'ba3Po4ySCXpa8hqvBPOB',
-        'HOST': 'containers-us-west-100.railway.app', 
+        'PASSWORD': 'Payboi10',
+        'HOST': 'localhost', 
         'PORT': '6647',
     }
 }
