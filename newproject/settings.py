@@ -15,7 +15,7 @@ import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-# DATABASE_URL = "postgresql://postgres:ba3Po4ySCXpa8hqvBPOB@containers-us-west-100.railway.app:6647/railway"
+# DATABASE_URL = "PGPASSWORD=ba3Po4ySCXpa8hqvBPOB psql -h containers-us-west-100.railway.app -U postgres -p 6647 -d railway"
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
@@ -87,7 +87,7 @@ DATABASES = {
         'USER': 'postgres',
         'PASSWORD': 'ba3Po4ySCXpa8hqvBPOB',
         'HOST': 'containers-us-west-100.railway.app', 
-        'PORT': 'railway',
+        'PORT': '6647',
     }
 }
 # Password validation
